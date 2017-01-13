@@ -2,8 +2,6 @@ machine:
     services:
         - docker
 
-deployment:
-    staging:
-        branch: master
-        commands:
-            - mvn package docker:build
+dependencies:
+    post:
+       - mvn package docker:build 
