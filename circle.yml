@@ -1,0 +1,9 @@
+machine:
+    services:
+        - docker
+
+deployment:
+    staging:
+        branch: master
+        commands:
+            - mvn package docker:build
